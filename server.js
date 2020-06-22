@@ -49,7 +49,7 @@ const Book = mongoose.model('Book', {
   }
 })
 
-Seed the database here:
+//Seed the database here:
 if (process.env.RESET_DATABASE) {
   console.log('Resetting my database!')
 

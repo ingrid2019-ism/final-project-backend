@@ -80,9 +80,7 @@ const authenticateUser = async (req, res, next) => {
 }
 
 
-// Defines the port the app will run on. Defaults to 8080, but can be 
-// overridden when starting the server. For example:
-//
+
 //   PORT=9000 npm start
 const port = process.env.PORT || 8080
 const app = express()

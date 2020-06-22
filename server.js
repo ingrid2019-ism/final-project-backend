@@ -50,18 +50,18 @@ const Book = mongoose.model('Book', {
 })
 
 //Seed the database here:
-if (process.env.RESET_DATABASE) {
-  console.log('Resetting my database!')
+//if (process.env.RESET_DATABASE) {
+//console.log('Resetting my database!')
 
-  const seedDatabase = async () => {
-    await Book.deleteMany()
-    booksData.forEach((book) => {
-      book.price = book.num_pages
-      new Book(book).save()
-    })
-  }
-  seedDatabase()
+const seedDatabase = async () => {
+  await Book.deleteMany()
+  booksData.forEach((book) => {
+    book.price = book.num_pages
+    new Book(book).save()
+  })
 }
+seedDatabase()
+//}
 
 const authenticateUser = async (req, res, next) => {
   try {

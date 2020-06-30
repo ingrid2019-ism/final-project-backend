@@ -11,7 +11,7 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 mongoose.set('useCreateIndex', true)
 
-//Create the data models here:
+// User model
 const User = mongoose.model('User', {
   name: {
     type: String,
@@ -31,6 +31,7 @@ const User = mongoose.model('User', {
   }
 })
 
+// Book model
 const Book = mongoose.model('Book', {
   bookId: {
     type: Number
@@ -49,7 +50,7 @@ const Book = mongoose.model('Book', {
   }
 })
 
-//Seed the database here:
+// Seeding the database
 if (process.env.RESET_DATABASE) {
   console.log('Resetting my database!')
 
